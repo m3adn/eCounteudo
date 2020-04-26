@@ -1,0 +1,14 @@
+{
+  "scripts": {
+    "docs:dev": "vuepress dev docs",
+    "docs:build": "vuepress build docs"
+  },
+  "dependencies": {
+    "bootstrap": "^4.4.1",
+    "bootstrap-vue": "^2.12.0",
+    "vue": "^2.6.11",
+    "vuepress-plugin-container": "^2.1.3",
+    "vuepress-plugin-mathjax": "^1.2.8",
+    "vuepress-theme-yuu": "^2.2.1"
+  }
+}
