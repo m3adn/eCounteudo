@@ -7,6 +7,8 @@ module.exports = {
             },
         }],
         ['@vuepress/back-to-top', true],
+        ['@vuepress/medium-zoom'],
+        ['@vuepress/nprogress'],
         ['container', {
             type: 'vue',
             before: '<pre class="vue-container"><code>',
@@ -39,7 +41,7 @@ module.exports = {
             { text: 'Electrónica', link: '/electronics/' },
             { text: 'Redes de Computadores', link: '/networks/' },
         ],
-        
+
         displayAllHeaders: true,
         sidebarDepth: 2,
         sidebar: {

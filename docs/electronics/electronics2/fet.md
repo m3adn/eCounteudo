@@ -130,4 +130,3 @@ Quando se fala em "polarização" de um dispositivo, em termos gerais, trata-se 
 
 1. Quais as relações entre as grandezas fundamentais (i.e. quais as suas características)?
 2. Como se polarizam os FET?
-
