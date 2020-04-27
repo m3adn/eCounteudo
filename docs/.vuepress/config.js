@@ -1,25 +1,4 @@
 module.exports = {
-    plugins: [
-        ['mathjax', {
-            target: 'svg',
-            macros: {
-                '\\Z': '\\mathbb{Z}',
-            },
-        }],
-        ['@vuepress/back-to-top', true],
-        ['@vuepress/medium-zoom'],
-        ['@vuepress/nprogress'],
-        ['container', {
-            type: 'vue',
-            before: '<pre class="vue-container"><code>',
-            after: '</code></pre>'
-        }],
-        ['container', {
-            type: 'upgrade',
-            before: info => `<UpgradePath title="${info}">`,
-            after: '</UpgradePath>'
-        }],
-    ],
     dest: '/',
     title: 'eSebenta',
     description: 'Solved Exercise Book',
@@ -42,13 +21,35 @@ module.exports = {
             { text: 'Redes de Computadores', link: '/networks/' },
         ],
 
-        displayAllHeaders: true,
+        displayAllHeaders: false,
         sidebarDepth: 2,
         sidebar: {
             '/electronics/electronics2/': getGuideSidebar('electronics2', 'Electrónica 2'),
             '/networks/': getGuideSidebar('networks', 'Redes de Computadores'),
         }
-    }
+    },
+    plugins: [
+        ['mathjax', {
+            target: 'svg',
+            macros: {
+                '\\Z': '\\mathbb{Z}',
+            },
+        }],
+        ['@vuepress/back-to-top', true],
+        //['@vuepress/medium-zoom'],
+        ['@vuepress/nprogress'],
+        ['container', {
+            type: 'vue',
+            before: '<pre class="vue-container"><code>',
+            after: '</code></pre>'
+        }],
+        ['container', {
+            type: 'upgrade',
+            before: info => `<UpgradePath title="${info}">`,
+            after: '</UpgradePath>'
+        }],
+    ],
+
 }
 
 function getGuideSidebar(theme, group) {
@@ -59,7 +60,10 @@ function getGuideSidebar(theme, group) {
                     title: group,
                     collapsable: false,
                     children: [
-                        'fet',
+                        'fet', 
+                        'jfet', 
+                        'mosfet', 
+                        'questoes'
                     ]
                 }
             ]
