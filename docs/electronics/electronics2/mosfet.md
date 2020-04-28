@@ -6,8 +6,10 @@ Apesar de haver algumas semelhanças em estruturas e modo de operação entre MO
 
 Uma camada grossa de material do tipo __p__ é formada a partir de uma base de silício, e é chamada de substrato. O substrato tanto pode estar conectado internamente ao terminal fonte, como pode conter um quarto terminal, denominado SS, disponível para o controlo de potencial do substrato. Os terminais de fonte e de dreno estão conectados às regiões dopadas do tipo __n__, por meio de contactos metálicos, não havendo um canal entre as duas regiões dopadas do tipo __n__. A ausência de um canal como componente construtivo do dispositivo, é a principal diferença entre os dois modelos de MOSFET. A camada SiO$_2$ é uma camada formada pro substrato do tipo __p__ e serve para isolar a plataforma metálica da __porta__ da região entre o __dreno__ e a __fonte__.
 
-::: Warning
+::: warning
+
 Esquema da construção de um MOSFET de enriquecimento
+
 :::
 
 ## Polarização do MOSFET de enriquecimento
