@@ -29,6 +29,7 @@ module.exports = {
             '/electronics/circuit_theory/': getGuideSidebar('circuit_theory', 'Teoria dos Circuitos'),
             '/networks/': getGuideSidebar('networks', 'Redes de Computadores'),
             '/programming/java/': getGuideSidebar('java', 'Java'),
+            '/programming/c/': getGuideSidebar('c', 'C'),
         }
     },
     plugins: [
@@ -93,7 +94,7 @@ function getGuideSidebar(theme, group) {
                 }
             ]
 
-        case 'java': {
+        case 'java':
             return [
                 {
                     title: group,
@@ -104,7 +105,19 @@ function getGuideSidebar(theme, group) {
                     ]
                 }
             ]
-        }
+
+        case 'c':
+            return [
+                {
+                    title: group,
+                    collapsable: false,
+                    children: [
+                        '',
+                        'variaveis_e_expressoes'
+                    ]
+                }
+            ]
+
 
     }
 
