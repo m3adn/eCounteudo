@@ -1,15 +1,21 @@
 <template>
-  <div class="card-group">
-    <themes-card
-      :title="theme.title"
-      :sub-title="theme.subTitle"
-      :url="theme.url"
-      :bg="theme.color"
-      key="theme"
+  <b-card-group columns>
+    <router-link
+      class="mt-3"
+      :to="theme.url"
       v-for="(theme, index) in themes[theme]"
-      :key="theme.title"
-    />
-  </div>
+      :key="theme.id"
+    >
+      <b-card
+        :bg-variant="theme.color||'dark'"
+        :text-variant="theme.colorText||'white'"
+        :header="theme.title"
+        align="center"
+      >
+        <b-card-text>{{theme.subTitle}}</b-card-text>
+      </b-card>
+    </router-link>
+  </b-card-group>
 </template>
 
 <script>
@@ -20,24 +26,55 @@ export default {
       themes: {
         programming: [
           {
+            id: 0,
             title: "Java",
-            subTitle: "POO oriented",
+            subTitle: "Introdução ao JAVA & Programação Orienta a Objetos",
             url: "java",
             color: "danger"
           },
           {
+            id: 1,
             title: "C",
-            subTitle:
-              "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+            subTitle: "Série de exercícios resolvidos",
             url: "c",
             color: "info"
+          },
+          {
+            id: 2,
+            title: "Python",
+            subTitle: "Introdução ao Python & Programação Orientada a Objetos",
+            url: "python",
+            color: "success"
+          },
+          {
+            id: 3,
+            title: "Algoritmos e Estruturas de Dados",
+            subTitle:
+              "Resumo da Matéria. Problemas Codificados em várias linguagens de programação",
+            url: "aed",
+            color: "dark"
           }
         ],
         electronics: [
           {
+            id:0,
             title: "Electrónica 2",
             subTitle: "Resumos da materia e resolução de exercicios",
             url: "electronics2",
+            color: "danger"
+          },
+          {
+            id:1,
+            title: "Teoria dos Circuitos",
+            subTitle: "Resumos da materia e resolução de exercicios",
+            url: "circuit_theory",
+            color: "info"
+          },
+          {
+            id:2,
+            title: "Arduino",
+            subTitle: "Projetos Usando o Arduino",
+            url: "arduino",
             color: "info"
           }
         ]
@@ -46,11 +83,4 @@ export default {
   }
 };
 </script>
-<style>
-.card-group {
-  margin-top: 50px;
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-  gap: 20px;
-}
-</style>
+<style></style>

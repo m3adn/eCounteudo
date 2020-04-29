@@ -1,3 +1,0 @@
-# GUIDE 
-
-## ALL CARDS DISPLAY

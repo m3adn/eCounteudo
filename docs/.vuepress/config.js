@@ -1,5 +1,5 @@
 module.exports = {
-    dest: '/',
+    dest: "dist",
     title: 'eSebenta',
     description: 'Solved Exercise Book',
     serviceWorker: true,
@@ -19,13 +19,16 @@ module.exports = {
         nav: [
             { text: 'Electrónica', link: '/electronics/' },
             { text: 'Redes de Computadores', link: '/networks/' },
+            { text: 'Programação', link: '/programming/' }
         ],
 
         displayAllHeaders: false,
         sidebarDepth: 2,
         sidebar: {
             '/electronics/electronics2/': getGuideSidebar('electronics2', 'Electrónica 2'),
+            '/electronics/circuit_theory/': getGuideSidebar('circuit_theory', 'Teoria dos Circuitos'),
             '/networks/': getGuideSidebar('networks', 'Redes de Computadores'),
+            '/programming/java/': getGuideSidebar('java', 'Java'),
         }
     },
     plugins: [
@@ -60,10 +63,21 @@ function getGuideSidebar(theme, group) {
                     title: group,
                     collapsable: false,
                     children: [
-                        'fet', 
-                        'jfet', 
-                        'mosfet', 
+                        'fet',
+                        'jfet',
+                        'mosfet',
                         'questoes'
+                    ]
+                }
+            ]
+        case 'circuit_theory':
+            return [
+                {
+                    title: group,
+                    collapsable: false,
+                    children: [
+                        '',
+                        'exercicios',
                     ]
                 }
             ]
@@ -78,6 +92,19 @@ function getGuideSidebar(theme, group) {
                     ]
                 }
             ]
+
+        case 'java': {
+            return [
+                {
+                    title: group,
+                    collapsable: false,
+                    children: [
+                        '',
+                        'variaveis'
+                    ]
+                }
+            ]
+        }
 
     }
 
