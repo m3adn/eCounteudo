@@ -3,6 +3,9 @@ module.exports = {
     title: 'eSebenta',
     description: 'Solved Exercise Book',
     serviceWorker: true,
+    markdown: {
+        extractHeaders: ['h2', 'h3', 'h4']
+    },
     theme: 'yuu',
     themeConfig: {
         //logo: '/assets/img/logo.png',
@@ -51,7 +54,7 @@ module.exports = {
             type: 'upgrade',
             before: info => `<UpgradePath title="${info}">`,
             after: '</UpgradePath>'
-        }],
+        }]
     ],
 
 }
@@ -89,7 +92,9 @@ function getGuideSidebar(theme, group) {
                     title: group,
                     collapsable: false,
                     children: [
-                        'trabalhos',
+                        'trabalhos/trabalho1',
+                        'trabalhos/trabalho2',
+                        'trabalhos/trabalho3',
                     ]
                 }
             ]
