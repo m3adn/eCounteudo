@@ -1,17 +1,16 @@
 # Trabalho prático 2
 
-Utilize as seguintes redes para as interfaces dos routers e dos PCs:
+> Utilize as seguintes redes para as interfaces dos routers e dos PCs:
+> Configure os equipamentos, seguindo os seguintes passos.
 
-- Rede 1: 192.168.1.0 255.255.255.0
-
-- Rede 2: 192.168.2.0 255.255.255.0
-- Router 1 $\rightleftarrows$ Router 2: 10.10.10.0/30
-
-Configure os equipamentos, seguindo os seguintes passos.
+- Defina as redes que vai usar
+  - Rede 1: 192.168.1.0 255.255.255.0
+  - Rede 2: 192.168.2.0 255.255.255.0
+  - Router 1 $\rightleftarrows$ Router 2: 10.10.10.0/30
 
 - Apague a configuração do router e reiniciei o router
 
-> Igual para os dois routers
+`Igual para os dois routers`
 
 ```batch
 Router> enable
@@ -28,7 +27,7 @@ Router# show ip interface brief
 
 - Entre em modo de configuração. Altere o nome dos routers para R0 e R1.
 
-> Quase igual para os dois routers
+`Quase igual para os dois routers`
 
 ```batch
 Router# configure terminal
@@ -106,7 +105,7 @@ C    192.168.2.0/24 is directly connected, FastEthernet0/0
 
 - Grave a configuração
 
-> Igual para os dois routers
+`Igual para os dois routers`
 
 Router 0
 
