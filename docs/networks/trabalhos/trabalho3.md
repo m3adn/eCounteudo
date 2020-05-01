@@ -1,24 +1,25 @@
 # Trabalho prático 3
 
-Considere que dispõe das redes 192.168.0.0/24 a 192.168.10.0/24 para atribuir aos equipamentos.
+> Considere que dispõe das redes 192.168.0.0/24 a 192.168.10.0/24 para atribuir aos equipamentos.
+> Configure os equipamentos, seguindo os passos.
 
-- Rede 0: 192.168.0.0 255.255.255.0
+- Defina as redes que vai usar
 
-- Rede 1: 192.168.1.0 255.255.255.0
+  - Rede 0: 192.168.0.0 255.255.255.0
 
-- Rede 2: 192.168.2.0 255.255.255.0
+  - Rede 1: 192.168.1.0 255.255.255.0
 
-- Router 0 $\rightleftarrows$ Router 1: 192.168.3.0/30
+  - Rede 2: 192.168.2.0 255.255.255.0
 
-- Router 1 $\rightleftarrows$ Router 2: 192.168.3.4/30
+  - Router 0 $\rightleftarrows$ Router 1: 192.168.3.0/30
 
-- Router 1 $\rightleftarrows$ Router 3: 192.168.3.8/30 (exercício 2)
+  - Router 1 $\rightleftarrows$ Router 2: 192.168.3.4/30
 
-Configure os equipamentos, seguindo os seguintes passos
+  - Router 0 $\rightleftarrows$ Router 2: 192.168.3.8/30 (exercício 2)
 
 - Apague a configuração do router
 
-> Igual para todos os routers
+`Igual para todos os routers`
 
 ```bash
 Router> enable
@@ -28,7 +29,7 @@ Router# reload
 
 - Entre no modo de execução privilegiada. Liste as interfaces do router.
 
-> Igual para todos os routers
+`Igual para todos os routers`
 
 ```bash
 Router> enable
@@ -48,7 +49,7 @@ Vlan1                  unassigned      YES NVRAM  administratively down down
 
 - Entre em modo de configuração. Altere o nome do routers para R0, R1 e R2 conforme o caso
 
-> O procedimento é o mesmo para todos
+`O procedimento é o mesmo para todos`
 
 ```bash
 Router# configure terminal
@@ -182,7 +183,7 @@ C       192.168.3.4/30 is directly connected, Serial0/0/0
 
 Verifique a conetividade entre as redes utilizando o comando ping
 
-PC0 como exemplo
+`PC0 como exemplo`
 
 PC0 $\to$ PC4
 
@@ -270,4 +271,72 @@ Ping statistics for 192.168.1.1:
     Packets: Sent = 4, Received = 3, Lost = 1 (25% loss),
 Approximate round trip times in milli-seconds:
     Minimum = 2ms, Maximum = 2ms, Average = 2ms
+```
+
+> Realize as alterações necessária para recriar o próximo cenário
+
+Router R0
+
+```bash
+R0> enable
+R0# configure terminal
+R0(config)# interface serial 0/0/1
+R0(config-if)# ip address 192.168.3.9 255.255.255.252
+R0(config-if)# clock rate 64000
+R0(config-if)# no shutdown
+
+R0(config-if)# exit
+
+R0(config)# ip route 192.168.3.4 255.255.255.252 192.168.3.10
+R0(config)# ip route 192.168.2.0 255.255.255.0 192.168.3.10
+
+R0(config)# do show ip route
+```
+
+Resultado:
+
+```bash
+C    192.168.0.0/24 is directly connected, FastEthernet0/0
+S    192.168.1.0/24 [1/0] via 192.168.3.2
+                    [1/0] via 192.168.3.10
+S    192.168.2.0/24 [1/0] via 192.168.3.2
+                    [1/0] via 192.168.3.10
+     192.168.3.0/30 is subnetted, 3 subnets
+C       192.168.3.0 is directly connected, Serial0/0/0
+S       192.168.3.4 [1/0] via 192.168.3.2
+                    [1/0] via 192.168.3.10
+C       192.168.3.8 is directly connected, Serial0/0/1
+```
+
+Router R2
+
+```bash
+R2> enable
+R2# configure terminal
+R2(config)# interface serial 0/0/1
+R2(config-if)# ip address 192.168.3.10 255.255.255.252
+R2(config-if)# no shutdown
+
+R0(config-if)# exit
+
+R2(config)#ip route 192.168.3.0 255.255.255.252 192.168.3.9
+R2(config)#ip route 192.168.1.0 255.255.255.0 192.168.3.9
+R2(config)#ip route 192.168.0.0 255.255.255.0 192.168.3.9
+
+R2(config)# do show ip route
+```
+
+Resultado:
+
+```bash
+S    192.168.0.0/24 [1/0] via 192.168.3.5
+                    [1/0] via 192.168.3.9
+S    192.168.1.0/24 [1/0] via 192.168.3.5
+                    [1/0] via 192.168.3.9
+C    192.168.2.0/24 is directly connected, FastEthernet0/0
+     192.168.3.0/30 is subnetted, 3 subnets
+S       192.168.3.0 [1/0] via 192.168.3.9
+                    [1/0] via 192.168.3.5
+C       192.168.3.4 is directly connected, Serial0/0/0
+C       192.168.3.8 is directly connected, Serial0/0/1
 ```
