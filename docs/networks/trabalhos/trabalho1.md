@@ -1,14 +1,13 @@
 # Trabalho prático 1
 
-Utilize as seguintes redes para as interfaces dos routers e dos PCs:
+> Utilize as seguintes redes para as interfaces dos routers e dos PCs:
+> Configure os equipamentos, seguindo os seguintes passos.
 
-- Router 0 Fa 0/0
-  - Rede: 192.168.10.0 255.255.255.0
-
-- Router 0 Fa 0/1
-  - 192.168.20.0 255.255.255.0
-
-Configure os equipamentos, seguindo os seguintes passos.
+- Defina as redes que vai usar
+  - Router 0 Fa 0/0
+    - Rede: 192.168.10.0 255.255.255.0
+  - Router 0 Fa 0/1
+    - 192.168.20.0 255.255.255.0
 
 - Apague a configuração do router e reiniciei o router
 
@@ -28,9 +27,9 @@ Router# show ip interface brief
 Resultado:
 
 ```bash
-Interface              IP-Address      OK? Method Status                Protocol 
-FastEthernet0/0        unassigned      YES NVRAM  administratively down down 
-FastEthernet0/1        unassigned      YES NVRAM  administratively down down 
+Interface              IP-Address      OK? Method Status                Protocol
+FastEthernet0/0        unassigned      YES NVRAM  administratively down down
+FastEthernet0/1        unassigned      YES NVRAM  administratively down down
 Vlan1                  unassigned      YES NVRAM  administratively down down
 ```
 
@@ -58,7 +57,7 @@ R0(config-if)#exit
 
 R0(config)# interface fastEthernet 0/1
 R0(config-if)# ip address 192.168.20.254 255.255.255.0
-R0(config-if)# no shutdown 
+R0(config-if)# no shutdown
 ```
 
 - Grave a configuração
@@ -70,7 +69,7 @@ R0# copy running-config startup-config
 R0# reload
 ```
 
-- Após a configuração verifique a conectividade entre os vários elementos da rede. 
+- Após a configuração verifique a conectividade entre os vários elementos da rede.
 
 Exemplo: PC 01
 
@@ -105,7 +104,7 @@ C:\>tracert 192.168.20.1
 Resultado:
 
 ```bash
-Tracing route to 192.168.20.1 over a maximum of 30 hops: 
+Tracing route to 192.168.20.1 over a maximum of 30 hops:
 
   1   2 ms      1 ms      1 ms      192.168.10.254
   2   *         1 ms      0 ms      192.168.20.1
