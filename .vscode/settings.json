@@ -31,6 +31,7 @@
         "exit",
         "from",
         "hops",
+        "hosts",
         "loss",
         "masks",
         "milli",
@@ -52,6 +53,7 @@
         "tracert",
         "trip",
         "unassigned",
+        "unset",
         "variably",
         "write",
         "ôhmico"

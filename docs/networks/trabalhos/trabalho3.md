@@ -1,5 +1,7 @@
 # Trabalho prático 3
 
+![Construção de um FET de junção](/img/redes/p3a.png)
+
 > Considere que dispõe das redes 192.168.0.0/24 a 192.168.10.0/24 para atribuir aos equipamentos.
 > Configure os equipamentos, seguindo os passos.
 
@@ -123,8 +125,8 @@ R0(config)# ip route 192.168.1.0 255.255.255.0 192.168.3.2
 R0(config)# ip route 192.168.2.0 255.255.255.0 192.168.3.2
 R0(config)# ip route 192.168.3.4 255.255.255.252 192.168.3.2
 R0(config)# do show ip route
-R2(config)# exit
-R2# write memory
+R0(config)# exit
+R0# write memory
 ```
 
 Resultado:
@@ -274,6 +276,8 @@ Approximate round trip times in milli-seconds:
 ```
 
 > Realize as alterações necessária para recriar o próximo cenário
+
+![Construção de um FET de junção](/img/redes/p3b.png)
 
 Router R0
 

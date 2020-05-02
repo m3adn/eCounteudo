@@ -95,6 +95,7 @@ function getGuideSidebar(theme, group) {
                         'trabalhos/trabalho1',
                         'trabalhos/trabalho2',
                         'trabalhos/trabalho3',
+                        'trabalhos/trabalho4',
                     ]
                 }
             ]
