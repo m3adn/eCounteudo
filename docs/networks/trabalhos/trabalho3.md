@@ -1,6 +1,6 @@
 # Trabalho prático 3
 
-![Construção de um FET de junção](/img/redes/p3a.png)
+![Cenário protocolo 3.1](/img/redes/p3a.png)
 
 > Considere que dispõe das redes 192.168.0.0/24 a 192.168.10.0/24 para atribuir aos equipamentos.
 > Configure os equipamentos, seguindo os passos.
@@ -277,7 +277,7 @@ Approximate round trip times in milli-seconds:
 
 > Realize as alterações necessária para recriar o próximo cenário
 
-![Construção de um FET de junção](/img/redes/p3b.png)
+![Cenário protocolo 3.2](/img/redes/p3b.png)
 
 Router R0
 

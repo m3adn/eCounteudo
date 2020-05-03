@@ -1,6 +1,6 @@
 # Trabalho prático 1
 
-![Construção de um FET de junção](/img/redes/p1.png)
+![Cenário protocolo 1](/img/redes/p1.png)
 
 > Utilize as seguintes redes para as interfaces dos routers e dos PCs:
 > Configure os equipamentos, seguindo os seguintes passos.

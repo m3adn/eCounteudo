@@ -2,7 +2,7 @@
 
 > Considere o seguinte cenário de rede:
 
-![Construção de um FET de junção](/img/redes/p4.png)
+![Cenário protocolo 4](/img/redes/p4.png)
 
 > Considere que dispõe das redes 192.168.0.0/24 e 192.168.1.0/24 para atribuir aos equipamentos,
 > utilizando sub-redes de tamanho apropriado, de modo a que cada uma das redes locais possa albergar até 63 hosts + 1 Router.
