@@ -24,6 +24,29 @@ export default {
   data: function() {
     return {
       themes: {
+        themes: [
+          {
+            id: 0,
+            title: "Programação",
+            subTitle: "Algoritmos e Estruturas de Dados, Java, C, Python, ...",
+            url: "programming",
+            color: "info"
+          },
+          {
+            id: 1,
+            title: "Redes de Computadores",
+            subTitle: "Resumos da matéria de Redes de Computadores, protocolos resolvidos, ...",
+            url: "networks",
+            color: "dark"
+          },
+          {
+            id: 2,
+            title: "Electronica",
+            subTitle: "Analise de Circuitos, Electrónica 1 e 2, Electrónica de Potência, etc ",
+            url: "electronics",
+            color: "success"
+          },
+        ],
         programming: [
           {
             id: 0,
@@ -57,24 +80,34 @@ export default {
         ],
         electronics: [
           {
-            id:0,
+            id: 0,
             title: "Electrónica 2",
             subTitle: "Resumos da materia e resolução de exercicios",
             url: "electronics2",
             color: "danger"
           },
           {
-            id:1,
+            id: 1,
             title: "Teoria dos Circuitos",
             subTitle: "Resumos da materia e resolução de exercicios",
             url: "circuit_theory",
             color: "info"
-          },
-          {
-            id:2,
+          }
+          /*{
+            id: 2,
             title: "Arduino",
             subTitle: "Projetos Usando o Arduino",
             url: "arduino",
+            color: "info"
+          }*/
+        ],
+        networks: [
+          {
+            id: 0,
+            title: "Protocolos",
+            subTitle:
+              "Trabalho de laboratório - configuração de routers Cisco.",
+            url: "trabalhos/trabalho1",
             color: "info"
           }
         ]
