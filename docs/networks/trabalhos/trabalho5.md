@@ -565,11 +565,17 @@ C:\> ping 172.16.2.2
 
 ```bash
 Pinging 172.16.1.1 with 32 bytes of data:
+Pinging 172.16.2.2 with 32 bytes of data:
 
-Request timed out.
-Request timed out.
-Request timed out.
-Request timed out.
+Reply from 172.16.2.2: bytes=32 time=2ms TTL=126
+Reply from 172.16.2.2: bytes=32 time=60ms TTL=126
+Reply from 172.16.2.2: bytes=32 time=1ms TTL=126
+Reply from 172.16.2.2: bytes=32 time=61ms TTL=126
+
+Ping statistics for 172.16.2.2:
+    Packets: Sent = 4, Received = 4, Lost = 0 (0% loss),
+Approximate round trip times in milli-seconds:
+    Minimum = 1ms, Maximum = 61ms, Average = 31ms
 ```
 
 - Verifique qual o caminho seguido pelos pacotes utilizando o comando ​traceroute​.
