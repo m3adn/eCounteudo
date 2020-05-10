@@ -472,7 +472,7 @@ R0# show ip protocols
 
 Resultado:
 
-```
+```bash
 Routing Protocol is "rip"
 Sending updates every 30 seconds, next due in 8 seconds
 Invalid after 180 seconds, hold down 180, flushed after 240
