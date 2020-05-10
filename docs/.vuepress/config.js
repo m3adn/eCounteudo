@@ -92,11 +92,13 @@ function getGuideSidebar(theme, group) {
                     title: group,
                     collapsable: false,
                     children: [
+                        'ospf',
                         'trabalhos/trabalho1',
                         'trabalhos/trabalho2',
                         'trabalhos/trabalho3',
                         'trabalhos/trabalho4',
                         'trabalhos/trabalho5',
+                        'trabalhos/trabalho6',
                     ]
                 }
             ]
