@@ -39,4 +39,3 @@ Usar o comando `auto-cost reference-bandwidth "value"` para alterar o valor de r
 | 10 Mbps (Token Ring)  |   10 |
 | 16 Mbps (Token Ring)  |    6 |
 | 100 Mbps (Token Ring) |    1 |
-
