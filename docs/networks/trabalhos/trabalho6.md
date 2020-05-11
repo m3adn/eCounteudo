@@ -89,7 +89,7 @@ ISP1(config-if)# end
 ISP1# copy running-config startup-config
 ```
 
-### Router ISP 2
+### Router ISP2
 
 ```bash
 Router> enable
@@ -170,7 +170,7 @@ R1# copy running-config startup-config
 
 ## Configurar protocolo RIP v2
 
-### RIP ISP0
+### Router ISP0
 
 ```bash
 ISP0#configure terminal
@@ -183,7 +183,7 @@ ISP0(config-router)# end
 ISP0# wr
 ```
 
-### RIP ISP1
+### Router ISP1
 
 ```bash
 ISP1# configure terminal
@@ -195,7 +195,7 @@ ISP1(config-router)# end
 ISP1# wr
 ```
 
-### RIP ISP2
+### Router ISP2
 
 ```bash
 ISP2# configure terminal
@@ -207,7 +207,7 @@ ISP2(config-router)# end
 ISP2# wr
 ```
 
-### RIP R0
+### Router R0
 
 ```bash
 R0# configure terminal
@@ -223,7 +223,7 @@ R0(config-router)# end
 R0# wr
 ```
 
-### RIP R1
+### Router R1
 
 ```bash
 R1# configure terminal
@@ -243,7 +243,7 @@ R1# wr
 
 `show ip route`
 
-### Tabela do Router R0
+### Router R0
 
 ```bash
      10.0.0.0/30 is subnetted, 5 subnets
@@ -259,7 +259,7 @@ C       192.168.0.0 is directly connected, FastEthernet0/0
 C    192.168.1.0/24 is directly connected, FastEthernet0/1
 ```
 
-### Tabela do Router R1
+### Router R1
 
 ```bash
      10.0.0.0/30 is subnetted, 5 subnets
@@ -276,7 +276,7 @@ R    192.168.0.0/24 [120/2] via 10.0.0.17, 00:00:17, Serial0/0/1
 R    192.168.1.0/24 [120/2] via 10.0.0.17, 00:00:17, Serial0/0/1
 ```
 
-### Tabela do Router ISP 0
+### Router ISP0
 
 ```bash
      10.0.0.0/30 is subnetted, 5 subnets
@@ -291,7 +291,7 @@ R    192.168.0.0/24 [120/1] via 10.0.0.2, 00:00:07, Serial0/0/0
 R    192.168.1.0/24 [120/1] via 10.0.0.2, 00:00:07, Serial0/0/0
 ```
 
-### Tabela do Router ISP 1
+### Router ISP1
 
 ```bash
      10.0.0.0/30 is subnetted, 5 subnets
@@ -306,7 +306,7 @@ R    192.168.0.0/24 [120/2] via 10.0.0.5, 00:00:16, Serial0/0/0
 R    192.168.1.0/24 [120/2] via 10.0.0.5, 00:00:16, Serial0/0/0
 ```
 
-### Tabela do Router ISP 2
+### Router ISP2
 
 ```bash
      10.0.0.0/30 is subnetted, 5 subnets
@@ -323,7 +323,7 @@ R    192.168.1.0/24 [120/1] via 10.0.0.14, 00:00:13, Serial0/0/0
 
 ## Tabelas de routing (sem conexão entre ISP0 e ISP1)
 
-### Router R0 (ISP0 - ISP1 (off))
+### Router R0
 
 ```bash
      10.0.0.0/30 is subnetted, 5 subnets
@@ -338,7 +338,7 @@ C       192.168.0.0 is directly connected, FastEthernet0/0
 C    192.168.1.0/24 is directly connected, FastEthernet0/1
 ```
 
-### Router R1 (ISP0 - ISP1 (off))
+### Router R1
 
 ```bash
      10.0.0.0/30 is subnetted, 5 subnets
@@ -354,7 +354,7 @@ R    192.168.0.0/24 [120/2] via 10.0.0.17, 00:00:06, Serial0/0/1
 R    192.168.1.0/24 [120/2] via 10.0.0.17, 00:00:06, Serial0/0/1
 ```
 
-### Router ISP 0 (ISP0 - ISP1 (off))
+### Router ISP0
 
 ```bash
      10.0.0.0/30 is subnetted, 4 subnets
@@ -367,7 +367,7 @@ R    192.168.0.0/24 [120/1] via 10.0.0.2, 00:00:27, Serial0/0/0
 R    192.168.1.0/24 [120/1] via 10.0.0.2, 00:00:27, Serial0/0/0
 ```
 
-### Router ISP 1 (ISP0 - ISP1 (off))
+### Router ISP1
 
 ```bash
      10.0.0.0/30 is subnetted, 4 subnets
@@ -380,7 +380,7 @@ R    192.168.0.0/24 [120/3] via 10.0.0.10, 00:00:21, Serial0/0/1
 R    192.168.1.0/24 [120/3] via 10.0.0.10, 00:00:21, Serial0/0/1
 ```
 
-### Router ISP 2 (ISP0 - ISP1 (off))
+### Router ISP2
 
 ```bash
      10.0.0.0/30 is subnetted, 5 subnets
