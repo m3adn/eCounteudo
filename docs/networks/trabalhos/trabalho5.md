@@ -219,7 +219,7 @@ R1> enable
 R1# configure terminal
 
 R1(config)# router rip
-R1(config-router)# yap
+R1(config-router)# default-information originate
 R1(config-router)# end
 
 R1# show ip route

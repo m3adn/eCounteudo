@@ -34,20 +34,24 @@
 
 ## Divisão em sub-redes
 
-LANs
+### Redes
 
-- LAN 0 : 192.168.0.0 /25   - 128 IPs (126 livres)
-- LAN 1 : 192.168.1.0 /24   - 256 IPs (254 livres)
-- LAN 2 : 172.16.0.0 /25    - 128 IPs (126 livres)
-- LAN 3 : 172.16.0.128 /25  - 128 IPs (126 livres)
+|         LAN       |       Rede        |   IPs livres |    Broadcast  |    Gateway    |
+|        :---       |       :---        |    :---:     |     :---      |     :---      |
+| LAN 0 (120 hosts) | 192.168.0.0   /25 |   1 - 126    | 192.168.0.127 | 192.168.0.126 |
+| LAN 1 (200 hosts) | 192.168.1.0   /24 |   1 - 254    | 192.168.1.255 | 192.168.0.254 |
+| LAN 2 (64 hosts)  | 172.16.0.0    /25 |   1 - 126    | 171.16.0.127  | 172.16.0.126  |
+| LAN 2 (120 hosts) | 172.16.0.128  /25 | 129 - 254    | 171.16.0.255  | 172.16.0.254  |
 
-Entre Routers
+### Routers links
 
-- ISP 0 $\rightleftarrows$ R0    : 10.0.0.0/30  - 4 IPs (2 livres)
-- ISP 0 $\rightleftarrows$ ISP 1 : 10.0.0.4/30  
-- ISP 1 $\rightleftarrows$ R1    : 10.0.0.8/30
-- ISP 2 $\rightleftarrows$ R0    : 10.0.0.12/30
-- ISP 2 $\rightleftarrows$ R1    : 10.0.0.16/30
+|    Link       |   Rede         |  IPs livres | Broadcast  |    Serial     |
+|    :---       |   :---         |  :---       | :---       |     :---:     |
+| ISP 0 - R0    | 10.0.0.0   /30 |  1 - 2      | 10.0.0.3   | 0/0/0 - 0/0/0 |
+| ISP 0 - ISP 1 | 10.0.0.4   /30 |  5 - 6      | 10.0.0.7   | 0/0/1 - 0/0/0 |
+| ISP 1 - R1    | 10.0.0.8   /30 |  9 - 10     | 10.0.0.11  | 0/0/1 - 0/0/0 |
+| ISP 2 - R0    | 10.0.0.12  /30 | 13 - 14     | 10.0.0.15  | 0/0/0 - 0/0/1 |
+| ISP 2 - R0    | 10.0.0.16  /30 | 17 - 18     | 10.0.0.19  | 0/0/1 - 0/0/1 |
 
 ## Implementação
 

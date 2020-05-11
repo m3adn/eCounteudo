@@ -99,6 +99,7 @@ function getGuideSidebar(theme, group) {
                 {
                     title: "Componente Prática",
                     collapsable: true,
+                    sidebarDepth: 2,
                     children: [
                         'trabalhos/trabalho1',
                         'trabalhos/trabalho2',
