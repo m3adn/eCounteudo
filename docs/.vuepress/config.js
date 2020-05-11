@@ -26,7 +26,7 @@ module.exports = {
         ],
 
         displayAllHeaders: false,
-        sidebarDepth: 2,
+        sidebarDepth: 1,
         sidebar: {
             '/electronics/electronics2/': getGuideSidebar('electronics2', 'Electrónica 2'),
             '/electronics/circuit_theory/': getGuideSidebar('circuit_theory', 'Teoria dos Circuitos'),
@@ -89,16 +89,24 @@ function getGuideSidebar(theme, group) {
         case 'networks':
             return [
                 {
-                    title: group,
-                    collapsable: false,
+                    title: "Componente Teórica",
+                    collapsable: true,
                     children: [
                         'ospf',
+                        'resumo'
+                    ]
+                },
+                {
+                    title: "Componente Prática",
+                    collapsable: true,
+                    children: [
                         'trabalhos/trabalho1',
                         'trabalhos/trabalho2',
                         'trabalhos/trabalho3',
                         'trabalhos/trabalho4',
                         'trabalhos/trabalho5',
                         'trabalhos/trabalho6',
+                        'trabalhos/book_ospf_1',
                     ]
                 }
             ]

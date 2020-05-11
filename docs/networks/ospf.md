@@ -16,13 +16,15 @@ Permite a hierarquização da rede por meio de sua divisão em domínios de rote
 
 O tráfego entre as áreas é coordenado pelo router de borda da área (ABR).
 
-![OSPF](https://miro.medium.com/max/729/0*N0VscxpsjKXRRfaI.png)
+![OSPF](/img/redes/ospf.png)
 
 A segmentação também reduz o impacto na CPU e memória dos routers.
 
 Na existência de várias áreas na rede, será nomeada uma dessa area para ser a __area 0__, também chamada de _backbone area_ ou _área de trânsito_. A __area 0__ é a área principal e têm sempre de existir. Todas as demais áreas têm de se ligar diretamente a __area 0__. Caso a ligação direta não seja possível, temos de usar _virtual links_, túneis criados para "enganar" o OSPF, fazendo-o pensar que a área em questão encontra-se diretamente conectada a __área 0__.
 
 ## OSPF Area
+
+![Not-So-Stubby Area](/img/redes/ospf_tipos_rede_lsa.png)
 
 ### Internal Router
 
@@ -91,7 +93,43 @@ Ao receber um pacote LSR, o router encaminha ao solicitante as informações ped
 
 ## Operações do OSPF
 
-// imagem
+- Criação de relações de vizinhança e de adjacência com outros routers.
+- Troca de informações de encaminhamento
+- Determinação de rotas.
+
+Os routers com OSPF ativo começam pro estabelecer relações de vizinhança entre si que determinam quem participa nas comunicações do tipo OSPF. Após estabelecerem essas relações de vizinhança, os routers trocam as suas bases de dados relativas à topologia e às possíveis rotas. De seguida, com esta informação topológica, os routers calculam as melhores rotas para os vários destinos.
+
+### Criação de relações de vizinhança
+
+#### Down
+
+A interface não recebe pacotes "Hello".
+
+#### Init
+
+São recebidos pacotes "Hello" de outros routers, pelo que se inicia a criação de uma vizinhança.
+
+#### 2 Way
+
+O router recebe uma mensagem que o inclui como possível vizinho e que confirma que os parâmetros de caracterização do vizinho estão corretos.
+
+#### ExStart
+
+Estabelece-se uma relação mestre/escravo para troca de mensagens de sincronização da base de dados. O mestre é o router co maior RID.
+
+#### Exchange
+
+Envio de mensagem _Database Description_ e _Link State Request_, que contêm informação de encaminhamento.
+
+#### Loading
+
+Pedido aos routers vizinhos de informação topológica atualizada, os quais respondem com mensagens de atualização (LSU - Link State Update).
+
+#### Full
+
+A informação topológica está sincronizada entre dois routers.
+
+![Operações OSPF](/img/redes/ospf_operacoes.png)
 
 ## Redes Multi-acesso
 
@@ -192,9 +230,7 @@ Ao hierarquizarmos a topologia do OSPF criamos várias áreas interligadas por v
 
 ### Standard area: áreas "normais"
 
-Inclui a Área 0.
-
-// imagem
+![Standard Area](/img/redes/ospf_standard_area.png)
 
 ### Stub area
 
@@ -202,19 +238,21 @@ Recebe dos ABRs rotas default e LSAs tipo 3 contendo rotas internas sumariadas.
 
 Não pode conter routers ASBR (que recebem informações de outras rede com protocolos de roteamento diferentes do OSPF).
 
-// imagem
+![Stub Area](/img/redes/ospf_stub_area.png)
 
 ### Totally Stubby area
 
 Semelhante à __stub__, mas recebe apenas a rota default do ABR. Também não pode conter routers ASBR.
 
-// imagem
+![Totally Stub Area](/img/redes/ospf_totallystub_area.png)
 
 ### Not-so-stubby area (NSSA)
 
 Uma forma da Cisco permitir a existência de um ASBR em uma área stub. permite a passagem de LSAs tipo 7 (gerados pelos ASBR).
 
 Não recebe rota default se não for configurada para tal.
+
+![Not-So-Stubby Area](/img/redes/ospf_not_so_stubby_area.png)
 
 ## Métrica OSPF
 

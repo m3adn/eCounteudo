@@ -1,4 +1,4 @@
-# Trabalho pratico 6
+# RIP - Trabalho prático 6
 
 > Considere o seguinte cenário de rede:
 
