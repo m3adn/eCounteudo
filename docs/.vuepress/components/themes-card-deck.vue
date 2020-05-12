@@ -35,17 +35,19 @@ export default {
           {
             id: 1,
             title: "Redes de Computadores",
-            subTitle: "Resumos da matéria de Redes de Computadores, protocolos resolvidos, ...",
+            subTitle:
+              "Resumos da matéria de Redes de Computadores, protocolos resolvidos, ...",
             url: "networks",
             color: "dark"
           },
           {
             id: 2,
             title: "Electronica",
-            subTitle: "Analise de Circuitos, Electrónica 1 e 2, Electrónica de Potência, etc ",
+            subTitle:
+              "Analise de Circuitos, Electrónica 1 e 2, Electrónica de Potência, etc ",
             url: "electronics",
             color: "success"
-          },
+          }
         ],
         programming: [
           {
@@ -104,10 +106,18 @@ export default {
         networks: [
           {
             id: 0,
-            title: "Protocolos",
+            title: "Componente Prática",
             subTitle:
               "Trabalho de laboratório - configuração de routers Cisco.",
             url: "trabalhos/trabalho1",
+            color: "info"
+          },
+          {
+            id: 1,
+            title: "Componete Teórica",
+            subTitle:
+              "Apontamentos",
+            url: "ospf",
             color: "info"
           }
         ]

@@ -2,7 +2,7 @@
 
 > Considere o seguinte cenário de rede:
 
-![Cenário protocolo 5.1](/img/redes/p5.png)
+![Cenário protocolo 5.1](/img/redes/3R2C3L.png)
 
 > Considere que dispõe da rede 172.16.0.0/16 para atribuir às redes locais e a rede 10.0.0.0/24
 > para atribuir à ligações entre os routers.
@@ -406,7 +406,7 @@ Trace complete.
 
 Repita o exercício anterior para o seguinte cenário
 
-![Cenário protocolo 5.2](/img/redes/p5b.png)
+![Cenário protocolo 5.2](/img/redes/3R3C3L.png)
 
 `Configura as interfaces`
 
