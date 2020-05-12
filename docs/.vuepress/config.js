@@ -26,7 +26,6 @@ module.exports = {
         ],
 
         displayAllHeaders: false,
-        sidebarDepth: 1,
         sidebar: {
             '/electronics/electronics2/': getGuideSidebar('electronics2', 'Electrónica 2'),
             '/electronics/circuit_theory/': getGuideSidebar('circuit_theory', 'Teoria dos Circuitos'),
