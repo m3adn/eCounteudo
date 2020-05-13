@@ -306,4 +306,4 @@ C    192.168.2.0/24 is directly connected, FastEthernet0/0
 
 ### Analise do protocolo
 
-```
+

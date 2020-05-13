@@ -107,6 +107,7 @@ function getGuideSidebar(theme, group) {
                         'trabalhos/trabalho6',
                         'trabalhos/book_ospf_1',
                         'trabalhos/trabalho7',
+                        'trabalhos/trabalho8',
                     ]
                 }
             ]
