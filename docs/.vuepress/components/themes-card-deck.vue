@@ -109,7 +109,7 @@ export default {
             title: "Componente Prática",
             subTitle:
               "Trabalho de laboratório - configuração de routers Cisco.",
-            url: "trabalhos/trabalho1",
+            url: "componentepratica/trabalho1",
             color: "info"
           },
           {
@@ -117,7 +117,7 @@ export default {
             title: "Componete Teórica",
             subTitle:
               "Apontamentos",
-            url: "ospf",
+            url: "componenteteorica/ospf",
             color: "info"
           }
         ]

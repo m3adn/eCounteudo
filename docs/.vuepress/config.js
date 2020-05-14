@@ -91,23 +91,23 @@ function getGuideSidebar(theme, group) {
                     title: "Componente Teórica",
                     collapsable: true,
                     children: [
-                        'ospf',
-                        'resumo'
+                        'componenteteorica/ospf',
+                        'componenteteorica/resumo'
                     ]
                 },
                 {
                     title: "Componente Prática",
                     collapsable: true,
                     children: [
-                        'trabalhos/trabalho1',
-                        'trabalhos/trabalho2',
-                        'trabalhos/trabalho3',
-                        'trabalhos/trabalho4',
-                        'trabalhos/trabalho5',
-                        'trabalhos/trabalho6',
-                        'trabalhos/book_ospf_1',
-                        'trabalhos/trabalho7',
-                        'trabalhos/trabalho8',
+                        'componentepratica/trabalho1',
+                        'componentepratica/trabalho2',
+                        'componentepratica/trabalho3',
+                        'componentepratica/trabalho4',
+                        'componentepratica/trabalho5',
+                        'componentepratica/trabalho6',
+                        'componentepratica/book_ospf_1',
+                        'componentepratica/trabalho7',
+                        'componentepratica/trabalho8',
                     ]
                 }
             ]

@@ -7,7 +7,7 @@ Considere o seguinte cenário de rede:
 Tem disponíveis as seguintes redes para atribuir aos equipamentos:
 
 - LAN0 e LAN1: 192.168.0.0 /16
-- LAN0 e LAN1: 172.16.0.0  /16
+- LAN2 e LAN3: 172.16.0.0  /16
 - Entre Routers: 10.0.0.0  /24
 
 Efetue a divisão em sub-redes, de modo a garantir que cada uma redes pode conter o seguinte número de hosts:
@@ -34,8 +34,8 @@ Verifique os seguintes pontos:
 |         LAN       |       Rede                       |   IPs livres  |    Broadcast  |    Gateway    |
 |        :---       |       :---                       |    :---:      |     :---      |     :---      |
 | LAN 0 (500 hosts) | 192.168.0.0  /23 (255.255.254.0) |   1 - .1.254  | 192.168.1.255 | 192.168.1.254 |
-| LAN 1 (200 hosts) | 192.168.2.0  /24 (255.255.254.0) |   1 - 254     | 192.168.2.255 | 192.168.2.254 |
-| LAN 2 (200 hosts) | 172.16.0.0   /24 (255.255.254.0) |   1 - 254     | 172.16.0.255  | 172.16.0.254  |
+| LAN 1 (200 hosts) | 192.168.2.0  /24 (255.255.255.0) |   1 - 254     | 192.168.2.255 | 192.168.2.254 |
+| LAN 2 (200 hosts) | 172.16.0.0   /24 (255.255.255.0) |   1 - 254     | 172.16.0.255  | 172.16.0.254  |
 | LAN 3 (500 hosts) | 172.16.2.0   /23 (255.255.254.0) |   2.1 - 3.254 | 172.16.3.255  | 172.16.3.254  |
 
 ### Routers links
