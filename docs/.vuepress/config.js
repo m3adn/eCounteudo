@@ -19,7 +19,7 @@ module.exports = {
         editLinks: true,
         editLinkText: 'Edit this page on GitHub',
 
-        nav: [
+        nav: [ 
             { text: 'Electrónica', link: '/electronics/' },
             { text: 'Redes de Computadores', link: '/networks/' },
             { text: 'Programação', link: '/programming/' }
@@ -27,7 +27,7 @@ module.exports = {
 
         displayAllHeaders: false,
         sidebar: {
-            '/electronics/electronics2/': getGuideSidebar('electronics2', 'Electrónica 2'),
+            '/electronics/electronics2/': getGuideSidebar('electronics2', 'Electrônica 2'),
             '/electronics/circuit_theory/': getGuideSidebar('circuit_theory', 'Teoria dos Circuitos'),
             '/networks/': getGuideSidebar('networks', 'Redes de Computadores'),
             '/programming/java/': getGuideSidebar('java', 'Java'),
@@ -92,6 +92,8 @@ function getGuideSidebar(theme, group) {
                     collapsable: true,
                     children: [
                         'componenteteorica/ospf',
+                        'componenteteorica/icmp',
+                        'componenteteorica/sckets',
                         'componenteteorica/resumo'
                     ]
                 },

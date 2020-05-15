@@ -94,14 +94,14 @@ export default {
             subTitle: "Resumos da materia e resolução de exercicios",
             url: "circuit_theory",
             color: "info"
-          }
-          /*{
+          },
+          {
             id: 2,
             title: "Arduino",
             subTitle: "Projetos Usando o Arduino",
             url: "arduino",
             color: "info"
-          }*/
+          }
         ],
         networks: [
           {
